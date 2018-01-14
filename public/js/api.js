@@ -6,8 +6,8 @@ function fetchUser(id) {
   	.then((response) => response.body);
 }
 
-function fetchPosts() {
+function fetchPosts(userId) {
 	return request
-		.get("http://localhost:3000/users/10/posts")
+		.get("http://localhost:3000/users/" + userId + "/posts")
 		.then((response) => response.body);
 }
